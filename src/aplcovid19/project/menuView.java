@@ -81,6 +81,7 @@ public class menuView extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Beranda");
 
         background.setBackground(new java.awt.Color(236, 240, 241));
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

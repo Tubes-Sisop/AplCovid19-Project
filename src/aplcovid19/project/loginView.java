@@ -107,6 +107,11 @@ public class loginView extends javax.swing.JFrame {
         btn_signup.setText("Sign Up");
         btn_signup.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(236, 240, 241), 2, true));
         btn_signup.setContentAreaFilled(false);
+        btn_signup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_signupActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(236, 240, 241));
@@ -187,6 +192,13 @@ public class loginView extends javax.swing.JFrame {
         dashboard.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btn_signinActionPerformed
+
+    private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
+        // TODO add your handling code here:
+        signupView signUp = new signupView();
+        signUp.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btn_signupActionPerformed
 
     /**
      * @param args the command line arguments
