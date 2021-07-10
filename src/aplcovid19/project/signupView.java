@@ -56,6 +56,7 @@ public class signupView extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(236, 240, 241));
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(236, 240, 241));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplcovid19/img/user_32px.png"))); // NOI18N
         jLabel1.setText("DAFTAR PENGGUNA");
 
         signup.setBackground(new java.awt.Color(41, 128, 185));
@@ -70,6 +71,8 @@ public class signupView extends javax.swing.JFrame {
         jTextField1.setForeground(new java.awt.Color(236, 240, 241));
         jTextField1.setBorder(null);
 
+        jSeparator1.setBackground(new java.awt.Color(236, 240, 241));
+
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(236, 240, 241));
         jLabel3.setText("Username :");
@@ -79,10 +82,14 @@ public class signupView extends javax.swing.JFrame {
         jTextField2.setForeground(new java.awt.Color(236, 240, 241));
         jTextField2.setBorder(null);
 
+        jSeparator2.setBackground(new java.awt.Color(236, 240, 241));
+
         jTextField3.setBackground(new java.awt.Color(41, 128, 185));
         jTextField3.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jTextField3.setForeground(new java.awt.Color(236, 240, 241));
         jTextField3.setBorder(null);
+
+        jSeparator3.setBackground(new java.awt.Color(236, 240, 241));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(236, 240, 241));
@@ -93,6 +100,8 @@ public class signupView extends javax.swing.JFrame {
         jTextField4.setForeground(new java.awt.Color(236, 240, 241));
         jTextField4.setBorder(null);
 
+        jSeparator4.setBackground(new java.awt.Color(236, 240, 241));
+
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(236, 240, 241));
         jLabel6.setText("Password :");
@@ -101,6 +110,8 @@ public class signupView extends javax.swing.JFrame {
         jTextField5.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jTextField5.setForeground(new java.awt.Color(236, 240, 241));
         jTextField5.setBorder(null);
+
+        jSeparator5.setBackground(new java.awt.Color(236, 240, 241));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(236, 240, 241));
@@ -211,8 +222,8 @@ public class signupView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
-                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_batal, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_daftar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
@@ -227,7 +238,7 @@ public class signupView extends javax.swing.JFrame {
                 .addComponent(signup, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(136, 136, 136)
+                .addGap(116, 116, 116)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
