@@ -5,6 +5,7 @@
  */
 package aplcovid19.project;
 import javax.swing.*;
+import java.awt.Color;
 
 /**
  *
@@ -79,6 +80,8 @@ public class menuView extends javax.swing.JFrame {
         showPanel = new javax.swing.JPanel();
         titlePanel6 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Beranda");
@@ -94,6 +97,18 @@ public class menuView extends javax.swing.JFrame {
         btn_showData.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_showDataMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_showDataMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_showDataMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btn_showDataMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btn_showDataMouseReleased(evt);
             }
         });
 
@@ -133,6 +148,18 @@ public class menuView extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_deleteDataMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_deleteDataMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_deleteDataMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btn_deleteDataMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btn_deleteDataMouseReleased(evt);
+            }
         });
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
@@ -167,9 +194,22 @@ public class menuView extends javax.swing.JFrame {
 
         btn_home.setBackground(new java.awt.Color(52, 152, 219));
         btn_home.setForeground(new java.awt.Color(189, 195, 199));
+        btn_home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_home.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_homeMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_homeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_homeMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btn_homeMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btn_homeMouseReleased(evt);
             }
         });
 
@@ -209,6 +249,18 @@ public class menuView extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_announcementMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_announcementMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_announcementMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btn_announcementMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btn_announcementMouseReleased(evt);
+            }
         });
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
@@ -247,6 +299,18 @@ public class menuView extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_addDataMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_addDataMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_addDataMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btn_addDataMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btn_addDataMouseReleased(evt);
+            }
         });
 
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
@@ -284,6 +348,18 @@ public class menuView extends javax.swing.JFrame {
         btn_updateData.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_updateDataMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_updateDataMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_updateDataMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btn_updateDataMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btn_updateDataMouseReleased(evt);
             }
         });
 
@@ -412,16 +488,16 @@ public class menuView extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(236, 240, 241));
-        jLabel15.setText("Selamat Datang");
+        jLabel15.setText("SELAMAT DATANG");
 
         javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
         titlePanel.setLayout(titlePanelLayout);
         titlePanelLayout.setHorizontalGroup(
             titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
-                .addContainerGap(211, Short.MAX_VALUE)
+            .addGroup(titlePanelLayout.createSequentialGroup()
+                .addGap(185, 185, 185)
                 .addComponent(jLabel15)
-                .addGap(192, 192, 192))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
         titlePanelLayout.setVerticalGroup(
             titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -441,7 +517,7 @@ public class menuView extends javax.swing.JFrame {
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homePanelLayout.createSequentialGroup()
                 .addComponent(titlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 446, Short.MAX_VALUE))
+                .addGap(0, 443, Short.MAX_VALUE))
         );
 
         mainPanel.add(homePanel, "card2");
@@ -452,14 +528,15 @@ public class menuView extends javax.swing.JFrame {
 
         jLabel18.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(236, 240, 241));
-        jLabel18.setText("Announcement");
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplcovid19/img/commercial_32px.png"))); // NOI18N
+        jLabel18.setText("PENGUMUMAN");
 
         javax.swing.GroupLayout titlePanel3Layout = new javax.swing.GroupLayout(titlePanel3);
         titlePanel3.setLayout(titlePanel3Layout);
         titlePanel3Layout.setHorizontalGroup(
             titlePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel3Layout.createSequentialGroup()
-                .addContainerGap(214, Short.MAX_VALUE)
+                .addContainerGap(179, Short.MAX_VALUE)
                 .addComponent(jLabel18)
                 .addGap(192, 192, 192))
         );
@@ -481,7 +558,7 @@ public class menuView extends javax.swing.JFrame {
             annsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(annsPanelLayout.createSequentialGroup()
                 .addComponent(titlePanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 446, Short.MAX_VALUE))
+                .addGap(0, 438, Short.MAX_VALUE))
         );
 
         mainPanel.add(annsPanel, "card2");
@@ -492,23 +569,24 @@ public class menuView extends javax.swing.JFrame {
 
         jLabel16.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(236, 240, 241));
-        jLabel16.setText("Add Panel");
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplcovid19/img/coronavirus_32px.png"))); // NOI18N
+        jLabel16.setText("TAMBAH DATA KORBAN COVID-19");
 
         javax.swing.GroupLayout titlePanel1Layout = new javax.swing.GroupLayout(titlePanel1);
         titlePanel1.setLayout(titlePanel1Layout);
         titlePanel1Layout.setHorizontalGroup(
             titlePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel1Layout.createSequentialGroup()
-                .addContainerGap(241, Short.MAX_VALUE)
+                .addContainerGap(94, Short.MAX_VALUE)
                 .addComponent(jLabel16)
-                .addGap(210, 210, 210))
+                .addGap(104, 104, 104))
         );
         titlePanel1Layout.setVerticalGroup(
             titlePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel16)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout addPanelLayout = new javax.swing.GroupLayout(addPanel);
@@ -521,7 +599,7 @@ public class menuView extends javax.swing.JFrame {
             addPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addPanelLayout.createSequentialGroup()
                 .addComponent(titlePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 446, Short.MAX_VALUE))
+                .addGap(0, 438, Short.MAX_VALUE))
         );
 
         mainPanel.add(addPanel, "card2");
@@ -532,23 +610,24 @@ public class menuView extends javax.swing.JFrame {
 
         jLabel19.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(236, 240, 241));
-        jLabel19.setText("Update Panel");
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplcovid19/img/coronavirus_32px.png"))); // NOI18N
+        jLabel19.setText("UPDATE DATA KORBAN COVID-19");
 
         javax.swing.GroupLayout titlePanel4Layout = new javax.swing.GroupLayout(titlePanel4);
         titlePanel4.setLayout(titlePanel4Layout);
         titlePanel4Layout.setHorizontalGroup(
             titlePanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel4Layout.createSequentialGroup()
-                .addContainerGap(217, Short.MAX_VALUE)
+            .addGroup(titlePanel4Layout.createSequentialGroup()
+                .addGap(100, 100, 100)
                 .addComponent(jLabel19)
-                .addGap(207, 207, 207))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         titlePanel4Layout.setVerticalGroup(
             titlePanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel4Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel19)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout updatePanelLayout = new javax.swing.GroupLayout(updatePanel);
@@ -561,7 +640,7 @@ public class menuView extends javax.swing.JFrame {
             updatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(updatePanelLayout.createSequentialGroup()
                 .addComponent(titlePanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 446, Short.MAX_VALUE))
+                .addGap(0, 438, Short.MAX_VALUE))
         );
 
         mainPanel.add(updatePanel, "card2");
@@ -573,23 +652,24 @@ public class menuView extends javax.swing.JFrame {
 
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(236, 240, 241));
-        jLabel20.setText("Delete Panel");
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplcovid19/img/coronavirus_32px.png"))); // NOI18N
+        jLabel20.setText("DELETE DATA COVID-19");
 
         javax.swing.GroupLayout titlePanel5Layout = new javax.swing.GroupLayout(titlePanel5);
         titlePanel5.setLayout(titlePanel5Layout);
         titlePanel5Layout.setHorizontalGroup(
             titlePanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel5Layout.createSequentialGroup()
-                .addContainerGap(237, Short.MAX_VALUE)
+            .addGroup(titlePanel5Layout.createSequentialGroup()
+                .addGap(144, 144, 144)
                 .addComponent(jLabel20)
-                .addGap(192, 192, 192))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
         titlePanel5Layout.setVerticalGroup(
             titlePanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel5Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel20)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout deletePanelLayout = new javax.swing.GroupLayout(deletePanel);
@@ -602,7 +682,7 @@ public class menuView extends javax.swing.JFrame {
             deletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(deletePanelLayout.createSequentialGroup()
                 .addComponent(titlePanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 446, Short.MAX_VALUE))
+                .addGap(0, 438, Short.MAX_VALUE))
         );
 
         mainPanel.add(deletePanel, "card2");
@@ -614,36 +694,56 @@ public class menuView extends javax.swing.JFrame {
 
         jLabel21.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(236, 240, 241));
-        jLabel21.setText("Show Panel");
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplcovid19/img/coronavirus_32px.png"))); // NOI18N
+        jLabel21.setText("DATA COVID-19");
 
         javax.swing.GroupLayout titlePanel6Layout = new javax.swing.GroupLayout(titlePanel6);
         titlePanel6.setLayout(titlePanel6Layout);
         titlePanel6Layout.setHorizontalGroup(
             titlePanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel6Layout.createSequentialGroup()
-                .addContainerGap(233, Short.MAX_VALUE)
+            .addGroup(titlePanel6Layout.createSequentialGroup()
+                .addGap(182, 182, 182)
                 .addComponent(jLabel21)
-                .addGap(204, 204, 204))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         titlePanel6Layout.setVerticalGroup(
             titlePanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel6Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel21)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout showPanelLayout = new javax.swing.GroupLayout(showPanel);
         showPanel.setLayout(showPanelLayout);
         showPanelLayout.setHorizontalGroup(
             showPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(titlePanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(showPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
+                .addContainerGap())
         );
         showPanelLayout.setVerticalGroup(
             showPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(showPanelLayout.createSequentialGroup()
                 .addComponent(titlePanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 446, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         mainPanel.add(showPanel, "card2");
@@ -758,6 +858,126 @@ public class menuView extends javax.swing.JFrame {
         mainPanel.revalidate();
     }//GEN-LAST:event_btn_showDataMouseClicked
 
+    private void btn_homeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_homeMouseEntered
+        // TODO add your handling code here:
+        btn_home.setBackground(new Color(27,127,194));
+    }//GEN-LAST:event_btn_homeMouseEntered
+
+    private void btn_homeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_homeMouseExited
+        // TODO add your handling code here:
+        btn_home.setBackground(new Color(52,152,219));
+    }//GEN-LAST:event_btn_homeMouseExited
+
+    private void btn_homeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_homeMousePressed
+        // TODO add your handling code here:
+        btn_home.setBackground(new Color(1,101,168));
+    }//GEN-LAST:event_btn_homeMousePressed
+
+    private void btn_homeMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_homeMouseReleased
+        // TODO add your handling code here:
+        btn_home.setBackground(new Color(52,152,219));
+    }//GEN-LAST:event_btn_homeMouseReleased
+
+    private void btn_announcementMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_announcementMouseEntered
+        // TODO add your handling code here:
+        btn_announcement.setBackground(new Color(0,107,202));
+    }//GEN-LAST:event_btn_announcementMouseEntered
+
+    private void btn_announcementMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_announcementMouseExited
+        // TODO add your handling code here:
+        btn_announcement.setBackground(new Color(9,132,227));
+    }//GEN-LAST:event_btn_announcementMouseExited
+
+    private void btn_announcementMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_announcementMousePressed
+        // TODO add your handling code here:
+        btn_announcement.setBackground(new Color(0,81,176));
+    }//GEN-LAST:event_btn_announcementMousePressed
+
+    private void btn_announcementMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_announcementMouseReleased
+        // TODO add your handling code here:
+        btn_announcement.setBackground(new Color(9,132,227));
+    }//GEN-LAST:event_btn_announcementMouseReleased
+
+    private void btn_addDataMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addDataMouseEntered
+        // TODO add your handling code here:
+        btn_addData.setBackground(new Color(27,127,194));
+    }//GEN-LAST:event_btn_addDataMouseEntered
+
+    private void btn_addDataMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addDataMouseExited
+        // TODO add your handling code here:
+        btn_addData.setBackground(new Color(52,152,219));
+    }//GEN-LAST:event_btn_addDataMouseExited
+
+    private void btn_addDataMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addDataMousePressed
+        // TODO add your handling code here:
+        btn_addData.setBackground(new Color(1,101,168));
+    }//GEN-LAST:event_btn_addDataMousePressed
+
+    private void btn_addDataMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addDataMouseReleased
+        // TODO add your handling code here:
+        btn_addData.setBackground(new Color(52,152,219));
+    }//GEN-LAST:event_btn_addDataMouseReleased
+
+    private void btn_updateDataMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_updateDataMouseEntered
+        // TODO add your handling code here:
+        btn_updateData.setBackground(new Color(0,107,202));
+    }//GEN-LAST:event_btn_updateDataMouseEntered
+
+    private void btn_updateDataMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_updateDataMouseExited
+        // TODO add your handling code here:
+        btn_updateData.setBackground(new Color(9,132,227));
+    }//GEN-LAST:event_btn_updateDataMouseExited
+
+    private void btn_updateDataMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_updateDataMousePressed
+        // TODO add your handling code here:
+        btn_updateData.setBackground(new Color(0,81,176));
+    }//GEN-LAST:event_btn_updateDataMousePressed
+
+    private void btn_updateDataMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_updateDataMouseReleased
+        // TODO add your handling code here:
+        btn_updateData.setBackground(new Color(9,132,227));
+    }//GEN-LAST:event_btn_updateDataMouseReleased
+
+    private void btn_deleteDataMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_deleteDataMouseEntered
+        // TODO add your handling code here:
+        btn_deleteData.setBackground(new Color(27,127,194));
+    }//GEN-LAST:event_btn_deleteDataMouseEntered
+
+    private void btn_deleteDataMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_deleteDataMouseExited
+        // TODO add your handling code here:
+        btn_deleteData.setBackground(new Color(52,152,219));
+    }//GEN-LAST:event_btn_deleteDataMouseExited
+
+    private void btn_deleteDataMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_deleteDataMousePressed
+        // TODO add your handling code here:
+        btn_deleteData.setBackground(new Color(1,101,168));
+    }//GEN-LAST:event_btn_deleteDataMousePressed
+
+    private void btn_deleteDataMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_deleteDataMouseReleased
+        // TODO add your handling code here:
+        btn_deleteData.setBackground(new Color(52,152,219));
+    }//GEN-LAST:event_btn_deleteDataMouseReleased
+
+    private void btn_showDataMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_showDataMouseEntered
+        // TODO add your handling code here:
+        btn_showData.setBackground(new Color(0,107,202));
+    }//GEN-LAST:event_btn_showDataMouseEntered
+
+    private void btn_showDataMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_showDataMouseExited
+        // TODO add your handling code here:
+        btn_showData.setBackground(new Color(9,132,227));
+    }//GEN-LAST:event_btn_showDataMouseExited
+
+    private void btn_showDataMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_showDataMousePressed
+        // TODO add your handling code here:
+        btn_showData.setBackground(new Color(0,81,176));
+    }//GEN-LAST:event_btn_showDataMousePressed
+
+    private void btn_showDataMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_showDataMouseReleased
+        // TODO add your handling code here:
+        btn_showData.setBackground(new Color(9,132,227));
+    }//GEN-LAST:event_btn_showDataMouseReleased
+
     
     /**
      * @param args the command line arguments
@@ -831,7 +1051,9 @@ public class menuView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel showPanel;
     private javax.swing.JPanel sidePanel;

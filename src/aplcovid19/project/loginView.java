@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package aplcovid19.project;
+import javax.swing.*;
+import java.awt.Color;
 
 /**
  *
@@ -43,6 +45,7 @@ public class loginView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("AplCovid19");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -96,6 +99,20 @@ public class loginView extends javax.swing.JFrame {
         btn_signin.setText("Sign In");
         btn_signin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(236, 240, 241), 2, true));
         btn_signin.setContentAreaFilled(false);
+        btn_signin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_signinMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_signinMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btn_signinMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btn_signinMouseReleased(evt);
+            }
+        });
         btn_signin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_signinActionPerformed(evt);
@@ -199,6 +216,26 @@ public class loginView extends javax.swing.JFrame {
         signUp.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btn_signupActionPerformed
+
+    private void btn_signinMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_signinMouseEntered
+        // TODO add your handling code here:
+        btn_signin.setBackground(new Color(27,127,194));
+    }//GEN-LAST:event_btn_signinMouseEntered
+
+    private void btn_signinMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_signinMouseExited
+        // TODO add your handling code here:
+        btn_signin.setBackground(new Color(52,152,219));
+    }//GEN-LAST:event_btn_signinMouseExited
+
+    private void btn_signinMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_signinMousePressed
+        // TODO add your handling code here:
+        btn_signin.setBackground(new Color(1,101,168));
+    }//GEN-LAST:event_btn_signinMousePressed
+
+    private void btn_signinMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_signinMouseReleased
+        // TODO add your handling code here:
+        btn_signin.setBackground(new Color(52,152,219));
+    }//GEN-LAST:event_btn_signinMouseReleased
 
     /**
      * @param args the command line arguments
