@@ -409,6 +409,7 @@ public class menuView extends javax.swing.JFrame {
         titlePanel.setBackground(new java.awt.Color(52, 152, 219));
 
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(236, 240, 241));
         jLabel15.setText("Selamat Datang");
 
         javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
@@ -448,6 +449,7 @@ public class menuView extends javax.swing.JFrame {
         titlePanel3.setBackground(new java.awt.Color(52, 152, 219));
 
         jLabel18.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(236, 240, 241));
         jLabel18.setText("Announcement");
 
         javax.swing.GroupLayout titlePanel3Layout = new javax.swing.GroupLayout(titlePanel3);
@@ -487,6 +489,7 @@ public class menuView extends javax.swing.JFrame {
         titlePanel1.setBackground(new java.awt.Color(52, 152, 219));
 
         jLabel16.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(236, 240, 241));
         jLabel16.setText("Add Panel");
 
         javax.swing.GroupLayout titlePanel1Layout = new javax.swing.GroupLayout(titlePanel1);
@@ -526,6 +529,7 @@ public class menuView extends javax.swing.JFrame {
         titlePanel4.setBackground(new java.awt.Color(52, 152, 219));
 
         jLabel19.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(236, 240, 241));
         jLabel19.setText("Update Panel");
 
         javax.swing.GroupLayout titlePanel4Layout = new javax.swing.GroupLayout(titlePanel4);
@@ -561,18 +565,20 @@ public class menuView extends javax.swing.JFrame {
         mainPanel.add(updatePanel, "card2");
 
         deletePanel.setBackground(new java.awt.Color(236, 240, 241));
+        deletePanel.setForeground(new java.awt.Color(236, 240, 241));
 
         titlePanel5.setBackground(new java.awt.Color(52, 152, 219));
 
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel20.setText("Selamat Datang");
+        jLabel20.setForeground(new java.awt.Color(236, 240, 241));
+        jLabel20.setText("Delete Panel");
 
         javax.swing.GroupLayout titlePanel5Layout = new javax.swing.GroupLayout(titlePanel5);
         titlePanel5.setLayout(titlePanel5Layout);
         titlePanel5Layout.setHorizontalGroup(
             titlePanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel5Layout.createSequentialGroup()
-                .addContainerGap(211, Short.MAX_VALUE)
+                .addContainerGap(237, Short.MAX_VALUE)
                 .addComponent(jLabel20)
                 .addGap(192, 192, 192))
         );
@@ -600,10 +606,12 @@ public class menuView extends javax.swing.JFrame {
         mainPanel.add(deletePanel, "card2");
 
         showPanel.setBackground(new java.awt.Color(236, 240, 241));
+        showPanel.setForeground(new java.awt.Color(236, 240, 241));
 
         titlePanel6.setBackground(new java.awt.Color(52, 152, 219));
 
         jLabel21.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(236, 240, 241));
         jLabel21.setText("Show Panel");
 
         javax.swing.GroupLayout titlePanel6Layout = new javax.swing.GroupLayout(titlePanel6);
@@ -805,7 +813,6 @@ public class menuView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -828,7 +835,6 @@ public class menuView extends javax.swing.JFrame {
     private javax.swing.JPanel sidePanel;
     private javax.swing.JPanel titlePanel;
     private javax.swing.JPanel titlePanel1;
-    private javax.swing.JPanel titlePanel2;
     private javax.swing.JPanel titlePanel3;
     private javax.swing.JPanel titlePanel4;
     private javax.swing.JPanel titlePanel5;
