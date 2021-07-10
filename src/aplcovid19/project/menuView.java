@@ -333,10 +333,11 @@ public class menuView extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(236, 240, 241));
         jLabel11.setText("Data COVID-19");
-        sidePanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, -1, -1));
+        sidePanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(236, 240, 241));
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplcovid19/img/coronavirus_32px.png"))); // NOI18N
         jLabel12.setText("Aplikasi");
         sidePanel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
