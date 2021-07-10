@@ -326,7 +326,7 @@
                       <Font name="Dialog" size="12" style="1"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/aplcovid19/img/info_32px.png"/>
+                      <Image iconType="3" name="/aplcovid19/img/commercial_32px.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>

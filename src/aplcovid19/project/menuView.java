@@ -264,7 +264,7 @@ public class menuView extends javax.swing.JFrame {
         });
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplcovid19/img/info_32px.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplcovid19/img/commercial_32px.png"))); // NOI18N
         jLabel7.setToolTipText("");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
