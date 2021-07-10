@@ -535,10 +535,10 @@ public class menuView extends javax.swing.JFrame {
         titlePanel3.setLayout(titlePanel3Layout);
         titlePanel3Layout.setHorizontalGroup(
             titlePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel3Layout.createSequentialGroup()
-                .addContainerGap(179, Short.MAX_VALUE)
+            .addGroup(titlePanel3Layout.createSequentialGroup()
+                .addGap(185, 185, 185)
                 .addComponent(jLabel18)
-                .addGap(192, 192, 192))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
         titlePanel3Layout.setVerticalGroup(
             titlePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -576,17 +576,17 @@ public class menuView extends javax.swing.JFrame {
         titlePanel1.setLayout(titlePanel1Layout);
         titlePanel1Layout.setHorizontalGroup(
             titlePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel1Layout.createSequentialGroup()
-                .addContainerGap(94, Short.MAX_VALUE)
+            .addGroup(titlePanel1Layout.createSequentialGroup()
+                .addGap(97, 97, 97)
                 .addComponent(jLabel16)
-                .addGap(104, 104, 104))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
         titlePanel1Layout.setVerticalGroup(
             titlePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel16)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout addPanelLayout = new javax.swing.GroupLayout(addPanel);
@@ -618,16 +618,16 @@ public class menuView extends javax.swing.JFrame {
         titlePanel4Layout.setHorizontalGroup(
             titlePanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel4Layout.createSequentialGroup()
-                .addGap(100, 100, 100)
+                .addGap(99, 99, 99)
                 .addComponent(jLabel19)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
         titlePanel4Layout.setVerticalGroup(
             titlePanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel4Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel19)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout updatePanelLayout = new javax.swing.GroupLayout(updatePanel);
@@ -653,23 +653,23 @@ public class menuView extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(236, 240, 241));
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplcovid19/img/coronavirus_32px.png"))); // NOI18N
-        jLabel20.setText("DELETE DATA COVID-19");
+        jLabel20.setText("DELETE DATA KORBAN COVID-19");
 
         javax.swing.GroupLayout titlePanel5Layout = new javax.swing.GroupLayout(titlePanel5);
         titlePanel5.setLayout(titlePanel5Layout);
         titlePanel5Layout.setHorizontalGroup(
             titlePanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanel5Layout.createSequentialGroup()
-                .addGap(144, 144, 144)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel5Layout.createSequentialGroup()
+                .addContainerGap(104, Short.MAX_VALUE)
                 .addComponent(jLabel20)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addGap(101, 101, 101))
         );
         titlePanel5Layout.setVerticalGroup(
             titlePanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel5Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel20)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout deletePanelLayout = new javax.swing.GroupLayout(deletePanel);
@@ -695,23 +695,23 @@ public class menuView extends javax.swing.JFrame {
         jLabel21.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(236, 240, 241));
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplcovid19/img/coronavirus_32px.png"))); // NOI18N
-        jLabel21.setText("DATA COVID-19");
+        jLabel21.setText("DATA KORBAN COVID-19");
 
         javax.swing.GroupLayout titlePanel6Layout = new javax.swing.GroupLayout(titlePanel6);
         titlePanel6.setLayout(titlePanel6Layout);
         titlePanel6Layout.setHorizontalGroup(
             titlePanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel6Layout.createSequentialGroup()
-                .addGap(182, 182, 182)
+                .addGap(140, 140, 140)
                 .addComponent(jLabel21)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         titlePanel6Layout.setVerticalGroup(
             titlePanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel6Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel21)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(

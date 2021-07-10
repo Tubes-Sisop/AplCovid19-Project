@@ -49,6 +49,7 @@ public class signupView extends javax.swing.JFrame {
         btn_daftar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Sign Up");
 
         background.setBackground(new java.awt.Color(41, 128, 185));
         background.setForeground(new java.awt.Color(236, 240, 241));
