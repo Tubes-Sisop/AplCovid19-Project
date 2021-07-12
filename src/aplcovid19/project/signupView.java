@@ -5,11 +5,6 @@
  */
 package aplcovid19.project;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author RACHMAN
@@ -274,28 +269,9 @@ public class signupView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_daftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_daftarActionPerformed
-        // Validasi apabila ada data yang kosong
-        if (txt_nama.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Nama tidak boleh kosong");
-            } if (txt_username.getText().equals("")) {
-                JOptionPane.showMessageDialog(null, "Username tidak boleh kosong");
-            } if (txt_password.getText().equals("")) {
-                JOptionPane.showMessageDialog(null, "Password tidak boleh kosong");
-            } if (txt_email.getText().equals("")) {
-                JOptionPane.showMessageDialog(null, "Email tidak boleh Kosong");
-            } if (txt_telp.getText().equals("")) {
-                JOptionPane.showMessageDialog(null, "Telepon tidak boleh kosong");
-            } else    
-        try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_aplcovid19","root","");
-            cn.createStatement().execute("INSERT INTO tblogin VALUES" + "('"+txt_nama.getText()+"','"+txt_username.getText()+"','"+txt_password.getText()+"','"+txt_email.getText()+"', '"+txt_telp.getText()+"')");
-            JOptionPane.showMessageDialog(null, "Data Berhasil ditambahkan");
-            menuView menu = new menuView();
-            menu.setVisible(true);
-            this.setVisible(false);
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Data Gagal ditambahkan!");
-        }
+        menuView menu = new menuView();
+        menu.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btn_daftarActionPerformed
 
     private void btn_batalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_batalActionPerformed

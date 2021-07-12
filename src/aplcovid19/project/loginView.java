@@ -4,29 +4,21 @@
  * and open the template in the editor.
  */
 package aplcovid19.project;
-import aplcovid19.koneksi.koneksi;
 import javax.swing.*;
 import java.awt.Color;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 /**
  *
  * @author RACHMAN
  */
 public class loginView extends javax.swing.JFrame {
-    Connection con;
-    Statement stat;
-    ResultSet rs;
-    String sql;
     
     public loginView() {
         initComponents();
-        koneksi Db = new koneksi();
-        Db.config();
-        con = Db.con;
-        stat = Db.stm;
+        // setting no-resize
+        setExtendedState(JFrame.MAXIMIZED_HORIZ);
+        setVisible(true);
+        setResizable(false);
     }
 
     /**
@@ -213,29 +205,12 @@ public class loginView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_signinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signinActionPerformed
-        // Validasi UserLogin
-        try {
-            sql = "SELECT * FROM tblogin WHERE username='"+txt_username.getText()+"' AND password='"+txt_password.getText()+"'";
-            rs  = stat.executeQuery(sql);
-        if(rs.next()){
-        if(txt_username.getText().equals(rs.getString("username")) && txt_password.getText().equals(rs.getString("password"))){
-            JOptionPane.showMessageDialog(null, "Login berhasil, Selamat Datang!");
-            
-            // pindah ke panel MenuView
-            menuView menu = new menuView();
-            menu.setVisible(true);
-            this.setVisible(false);
-        }
-        } else {
-            JOptionPane.showMessageDialog(null, "username atau password salah");
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
+        menuView menu = new menuView();
+        menu.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btn_signinActionPerformed
 
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
-        // TODO add your handling code here:
         signupView signUp = new signupView();
         signUp.setVisible(true);
         this.setVisible(false);

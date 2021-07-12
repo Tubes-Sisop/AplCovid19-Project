@@ -1,29 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aplcovid19.koneksi;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import java.io.FileInputStream;
+import java.util.Properties;
 import javax.swing.JOptionPane;
-        
+
 /**
- * 
  * @author RACHMAN
  */
 public class koneksi {
-    public Connection con;
-    public Statement stm;
-    
-    public void config(){
+    public Properties mypanel, myLanguage;
+    private String strNamePanel;
+    public koneksi() {
+        
+    }
+    public String SettingPanel(String nmPanel) {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/db_covid19", "root", "");
-            stm = con.createStatement();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "koneksi gagal "+e.getMessage());
+            mypanel = new Properties();
+            mypanel.load(new FileInputStream("lib/database.ini"));
+            strNamePanel = mypanel.getProperty(nmPanel);
+        } catch(Exception e) {
+            JOptionPane.showMessageDialog(null,e.getMessage(),"Error",JOptionPane.INFORMATION_MESSAGE);
+            System.err.println(e.getMessage());
+            System.exit(0);
         }
+        return strNamePanel;
     }
 }
