@@ -5,6 +5,11 @@
  */
 package aplcovid19.project;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author RACHMAN
@@ -31,18 +36,18 @@ public class signupView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         signup = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txt_nama = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txt_username = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
-        jTextField3 = new javax.swing.JTextField();
+        txt_password = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        txt_email = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txt_telp = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
         btn_batal = new javax.swing.JButton();
@@ -67,10 +72,10 @@ public class signupView extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(236, 240, 241));
         jLabel2.setText("Nama :");
 
-        jTextField1.setBackground(new java.awt.Color(41, 128, 185));
-        jTextField1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(236, 240, 241));
-        jTextField1.setBorder(null);
+        txt_nama.setBackground(new java.awt.Color(41, 128, 185));
+        txt_nama.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        txt_nama.setForeground(new java.awt.Color(236, 240, 241));
+        txt_nama.setBorder(null);
 
         jSeparator1.setBackground(new java.awt.Color(236, 240, 241));
 
@@ -78,17 +83,17 @@ public class signupView extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(236, 240, 241));
         jLabel3.setText("Username :");
 
-        jTextField2.setBackground(new java.awt.Color(41, 128, 185));
-        jTextField2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(236, 240, 241));
-        jTextField2.setBorder(null);
+        txt_username.setBackground(new java.awt.Color(41, 128, 185));
+        txt_username.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        txt_username.setForeground(new java.awt.Color(236, 240, 241));
+        txt_username.setBorder(null);
 
         jSeparator2.setBackground(new java.awt.Color(236, 240, 241));
 
-        jTextField3.setBackground(new java.awt.Color(41, 128, 185));
-        jTextField3.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(236, 240, 241));
-        jTextField3.setBorder(null);
+        txt_password.setBackground(new java.awt.Color(41, 128, 185));
+        txt_password.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        txt_password.setForeground(new java.awt.Color(236, 240, 241));
+        txt_password.setBorder(null);
 
         jSeparator3.setBackground(new java.awt.Color(236, 240, 241));
 
@@ -96,10 +101,10 @@ public class signupView extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(236, 240, 241));
         jLabel5.setText("E-Mail :");
 
-        jTextField4.setBackground(new java.awt.Color(41, 128, 185));
-        jTextField4.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(236, 240, 241));
-        jTextField4.setBorder(null);
+        txt_email.setBackground(new java.awt.Color(41, 128, 185));
+        txt_email.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        txt_email.setForeground(new java.awt.Color(236, 240, 241));
+        txt_email.setBorder(null);
 
         jSeparator4.setBackground(new java.awt.Color(236, 240, 241));
 
@@ -107,10 +112,10 @@ public class signupView extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(236, 240, 241));
         jLabel6.setText("Password :");
 
-        jTextField5.setBackground(new java.awt.Color(41, 128, 185));
-        jTextField5.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(236, 240, 241));
-        jTextField5.setBorder(null);
+        txt_telp.setBackground(new java.awt.Color(41, 128, 185));
+        txt_telp.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        txt_telp.setForeground(new java.awt.Color(236, 240, 241));
+        txt_telp.setBorder(null);
 
         jSeparator5.setBackground(new java.awt.Color(236, 240, 241));
 
@@ -153,31 +158,31 @@ public class signupView extends javax.swing.JFrame {
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                 .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                                                .addComponent(jTextField1)))
+                                                .addComponent(txt_nama)))
                                         .addGroup(signupLayout.createSequentialGroup()
                                             .addComponent(jLabel5)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                 .addComponent(jSeparator4)
-                                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                .addComponent(txt_email, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(signupLayout.createSequentialGroup()
                                         .addComponent(jLabel3)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jSeparator2)
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(txt_username, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGroup(signupLayout.createSequentialGroup()
                                     .addComponent(jLabel6)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(jSeparator3)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(txt_password, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(signupLayout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jSeparator5)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(txt_telp, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(signupLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btn_batal, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -189,37 +194,37 @@ public class signupView extends javax.swing.JFrame {
             signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(signupLayout.createSequentialGroup()
                 .addGap(46, 46, 46)
-                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(signupLayout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signupLayout.createSequentialGroup()
+                        .addComponent(txt_nama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(signupLayout.createSequentialGroup()
-                        .addComponent(jTextField2)
+                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signupLayout.createSequentialGroup()
+                        .addComponent(txt_username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(signupLayout.createSequentialGroup()
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(signupLayout.createSequentialGroup()
-                        .addComponent(jTextField4)
+                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signupLayout.createSequentialGroup()
+                        .addComponent(txt_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(signupLayout.createSequentialGroup()
-                        .addComponent(jTextField5)
+                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signupLayout.createSequentialGroup()
+                        .addComponent(txt_telp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -269,10 +274,28 @@ public class signupView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_daftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_daftarActionPerformed
-        // TODO add your handling code here:
-        menuView dashboard = new menuView();
-        dashboard.setVisible(true);
-        this.setVisible(false);
+        // Validasi apabila ada data yang kosong
+        if (txt_nama.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Nama tidak boleh kosong");
+            } if (txt_username.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Username tidak boleh kosong");
+            } if (txt_password.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Password tidak boleh kosong");
+            } if (txt_email.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Email tidak boleh Kosong");
+            } if (txt_telp.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Telepon tidak boleh kosong");
+            } else    
+        try {
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_aplcovid19","root","");
+            cn.createStatement().execute("INSERT INTO tblogin VALUES" + "('"+txt_nama.getText()+"','"+txt_username.getText()+"','"+txt_password.getText()+"','"+txt_email.getText()+"', '"+txt_telp.getText()+"')");
+            JOptionPane.showMessageDialog(null, "Data Berhasil ditambahkan");
+            menuView menu = new menuView();
+            menu.setVisible(true);
+            this.setVisible(false);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Data Gagal ditambahkan!");
+        }
     }//GEN-LAST:event_btn_daftarActionPerformed
 
     private void btn_batalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_batalActionPerformed
@@ -332,11 +355,11 @@ public class signupView extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JPanel signup;
+    private javax.swing.JTextField txt_email;
+    private javax.swing.JTextField txt_nama;
+    private javax.swing.JTextField txt_password;
+    private javax.swing.JTextField txt_telp;
+    private javax.swing.JTextField txt_username;
     // End of variables declaration//GEN-END:variables
 }
