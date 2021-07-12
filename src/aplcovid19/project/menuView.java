@@ -1,23 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aplcovid19.project;
+import aplcovid19.koneksi.koneksi;
 import javax.swing.*;
 import java.awt.Color;
+import java.sql.*;
 
 /**
- *
- * @author RACHMAN
+ * @author 
+ * Nama  : Rachman Aldiansyah (10119038)
+ *         Diva Sabila Ramadhan (10119039)
+ *         Agus Deri Dermawan (10119040)
+ * Kelas : IF-1
  */
-public class menuView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form menuView
-     */
+public class menuView extends javax.swing.JFrame {
+    // deklarasi Variabel
+    koneksi dbsetting;
+    String driver,database,user,pass;
+    Object tabel;
+    
     public menuView() {
         initComponents();
+        dbsetting = new koneksi();
+        driver    = dbsetting.SettingPanel("DBDriver");
+        database  = dbsetting.SettingPanel("DBDatabase");
+        user      = dbsetting.SettingPanel("DBUsername");
+        pass      = dbsetting.SettingPanel("DBPassword");
+        
         // setting no-resize
         setExtendedState(JFrame.MAXIMIZED_HORIZ);
         setVisible(true);
@@ -494,17 +502,17 @@ public class menuView extends javax.swing.JFrame {
         titlePanel.setLayout(titlePanelLayout);
         titlePanelLayout.setHorizontalGroup(
             titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanelLayout.createSequentialGroup()
-                .addGap(185, 185, 185)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
+                .addContainerGap(207, Short.MAX_VALUE)
                 .addComponent(jLabel15)
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addGap(164, 164, 164))
         );
         titlePanelLayout.setVerticalGroup(
             titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanelLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel15)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout homePanelLayout = new javax.swing.GroupLayout(homePanel);
@@ -517,7 +525,7 @@ public class menuView extends javax.swing.JFrame {
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homePanelLayout.createSequentialGroup()
                 .addComponent(titlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 443, Short.MAX_VALUE))
+                .addGap(0, 444, Short.MAX_VALUE))
         );
 
         mainPanel.add(homePanel, "card2");

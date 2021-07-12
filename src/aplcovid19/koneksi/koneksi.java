@@ -4,8 +4,13 @@ import java.util.Properties;
 import javax.swing.JOptionPane;
 
 /**
- * @author RACHMAN
+ * @author 
+ * Nama  : Rachman Aldiansyah (10119038)
+ *         Diva Sabila Ramadhan (10119039)
+ *         Agus Deri Dermawan (10119040)
+ * Kelas : IF-1
  */
+
 public class koneksi {
     public Properties mypanel, myLanguage;
     private String strNamePanel;

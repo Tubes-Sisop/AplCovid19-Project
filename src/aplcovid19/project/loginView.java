@@ -1,20 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aplcovid19.project;
+import aplcovid19.koneksi.koneksi;
 import javax.swing.*;
+import java.sql.*; // Fungsi Import yang digunakan untuk SQL
 import java.awt.Color;
 
 /**
- *
- * @author RACHMAN
+ * @author 
+ * Nama  : Rachman Aldiansyah (10119038)
+ *         Diva Sabila Ramadhan (10119039)
+ *         Agus Deri Dermawan (10119040)
+ * Kelas : IF-1
  */
+
 public class loginView extends javax.swing.JFrame {
+    // deklarasi Variabel
+    koneksi dbsetting;
+    String driver,database,user,pass;
+    Object tabel;
     
     public loginView() {
         initComponents();
+        dbsetting = new koneksi();
+        driver    = dbsetting.SettingPanel("DBDriver");
+        database  = dbsetting.SettingPanel("DBDatabase");
+        user      = dbsetting.SettingPanel("DBUsername");
+        pass      = dbsetting.SettingPanel("DBPassword");
+        
         // setting no-resize
         setExtendedState(JFrame.MAXIMIZED_HORIZ);
         setVisible(true);
@@ -205,9 +216,27 @@ public class loginView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_signinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signinActionPerformed
-        menuView menu = new menuView();
-        menu.setVisible(true);
-        this.setVisible(false);
+        // validasi userLogin
+        try {
+            Class.forName(driver);
+            Connection kon = DriverManager.getConnection(database,user,pass);
+            String SQL = "SELECT * FROM tblogin WHERE username='"+txt_username.getText()+"' AND password='"+txt_password.getText()+"'";
+            Statement stt = kon.createStatement();
+            ResultSet res = stt.executeQuery(SQL);
+            if(res.next()) {
+            if(txt_username.getText().equals(res.getString("username")) && txt_password.getText().equals(res.getString("password"))) {
+               JOptionPane.showMessageDialog(null, "Login Behasil, Selamat Datang! "+txt_username.getText());
+               // pindah ke panel menuView
+               menuView login = new menuView();
+               login.setVisible(true);
+               this.setVisible(false);
+            }
+            } else {
+                JOptionPane.showMessageDialog(null, "Username Atau Password Salah. Ulangi!");
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(),"Error",JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_btn_signinActionPerformed
 
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed

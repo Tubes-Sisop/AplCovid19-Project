@@ -1,21 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aplcovid19.project;
+import aplcovid19.koneksi.koneksi;
+import java.sql.*; // Fungsi Import Digunakan untuk SQL
+import javax.swing.*; // Fungsi Import Digunakan untuk SWING
 
 /**
- *
- * @author RACHMAN
+ * @author 
+ * Nama  : Rachman Aldiansyah (10119038)
+ *         Diva Sabila Ramadhan (10119039)
+ *         Agus Deri Dermawan (10119040)
+ * Kelas : IF-1
  */
-public class signupView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form signupView
-     */
+public class signupView extends javax.swing.JFrame {
+    // deklarasi Variabel
+    koneksi dbsetting;
+    String driver,database,user,pass;
+    Object tabel;
+
     public signupView() {
         initComponents();
+        dbsetting = new koneksi();
+        driver    = dbsetting.SettingPanel("DBDriver");
+        database  = dbsetting.SettingPanel("DBDatabase");
+        user      = dbsetting.SettingPanel("DBUsername");
+        pass      = dbsetting.SettingPanel("DBPassword");
     }
 
     /**
@@ -269,9 +277,29 @@ public class signupView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_daftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_daftarActionPerformed
-        menuView menu = new menuView();
-        menu.setVisible(true);
-        this.setVisible(false);
+        // validasi apabila ada data yang kosong
+        if (txt_nama.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Nama tidak boleh kosong");
+            } if (txt_username.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Username tidak boleh kosong");
+            } if (txt_password.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Password tidak boleh kosong");
+            } if (txt_email.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Email tidak boleh Kosong");
+            } if (txt_telp.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Telepon tidak boleh kosong");
+            } else  
+        try {
+            Connection kon = DriverManager.getConnection("jdbc:mysql://localhost/db_aplcovid19","root","");
+            kon.createStatement().execute("INSERT INTO tblogin VALUES" + "('"+txt_nama.getText()+"','"+txt_username.getText()+"','"+txt_password.getText()+"','"+txt_email.getText()+"', '"+txt_telp.getText()+"')");
+            JOptionPane.showMessageDialog(null, "Data Berhasil ditambahkan!");
+            // pindah ke panel menuView
+            menuView menu = new menuView();
+            menu.setVisible(true);
+            this.setVisible(false);
+        } catch (SQLException ex) {
+             JOptionPane.showMessageDialog(null, ex.getMessage(),"Error",JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_btn_daftarActionPerformed
 
     private void btn_batalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_batalActionPerformed
