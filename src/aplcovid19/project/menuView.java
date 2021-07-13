@@ -26,12 +26,76 @@ public class menuView extends javax.swing.JFrame {
         user      = dbsetting.SettingPanel("DBUsername");
         pass      = dbsetting.SettingPanel("DBPassword");
         
+        jTable1.setModel(tableModel);
+        settableload();
         // setting no-resize
         setExtendedState(JFrame.MAXIMIZED_HORIZ);
         setVisible(true);
         setResizable(false);
     }
-
+    
+    private javax.swing.table.DefaultTableModel tableModel=getDefaultTableModel();
+    private javax.swing.table.DefaultTableModel getDefaultTableModel(){
+        return new javax.swing.table.DefaultTableModel(
+        new Object[][]{},
+        new String[]{
+            "NIP",
+            "Nama Pegawai",
+            "Tanggal Lahir",
+            "Tempat Lahir",
+            "Alamat",
+            "Jenis kelamin",
+            "kode_jabatan"
+            }
+        )
+                {
+            boolean[] canEdit = new boolean[]
+            {
+                false, false, false, false, false
+            };
+            
+            public boolean isCellEditable(int rowIndex, int columnIndex)
+            {
+                return canEdit[columnIndex];
+            }
+        };
+    }
+String data[]= new String[7];
+private void settableload()
+{
+    String stat = "";
+    try{
+        Class.forName(driver);
+        Connection kon = DriverManager.getConnection(
+                database,
+                user,
+                pass);
+        Statement stt=kon.createStatement();
+        String SQL = "select * from tbpegawai";
+        ResultSet res = stt.executeQuery(SQL);
+        while (res.next()) 
+        {
+            data[0] = res.getString(1);
+            data[1] = res.getString(2);
+            data[2] = res.getString(3);
+            data[3] = res.getString(4);
+            data[4] = res.getString(5);
+            data[5] = res.getString(6);
+            data[6] = res.getString(7);
+            tableModel.addRow(data);
+        }
+        res.close();
+        res.close();
+        res.close();
+    }
+    catch(Exception ex){
+        System.err.println(ex.getMessage());
+        JOptionPane.showMessageDialog(null, 
+                ex.getMessage(), "Error",
+                JOptionPane.INFORMATION_MESSAGE);
+        System.exit(0);
+    }
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
