@@ -6,9 +6,9 @@ import java.awt.Color;
 
 /**
  * @author 
- * Nama  : Rachman Aldiansyah (10119038)
+ * Nama  : Rachman Aldiansyah   (10119038)
  *         Diva Sabila Ramadhan (10119039)
- *         Agus Deri Dermawan (10119040)
+ *         Agus Deri Dermawan   (10119040)
  * Kelas : IF-1
  */
 
